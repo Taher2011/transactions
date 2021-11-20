@@ -14,7 +14,7 @@ public class EmployeeService {
 	@Autowired
 	private EmployeeRepository employeeRepository;
 
-	@Transactional(propagation = Propagation.REQUIRED) // default level is Propagation.REQUIRED
+	@Transactional(propagation = Propagation.SUPPORTS)
 	public void insertEmployee(Employee employee) {
 		employeeRepository.save(employee);
 	}

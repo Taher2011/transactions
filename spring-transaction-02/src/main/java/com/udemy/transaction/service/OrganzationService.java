@@ -20,9 +20,9 @@ public class OrganzationService {
 	@Transactional(propagation = Propagation.REQUIRED)
 	public void joinOrganization(Employee employee, HealthInsurance healthInsurance) {
 		employeeService.insertEmployee(employee);
-//		if (employee.getEmpId().equals(12345678)) {
-//			throw new RuntimeException("throwing exception to test transaction roll-back");
-//		}
+		if (employee.getEmpId().equals(12345678)) {
+			throw new RuntimeException("throwing exception to test transaction roll-back");
+		}
 		healthInsuranceService.insertHealthInsurance(healthInsurance);
 	}
 

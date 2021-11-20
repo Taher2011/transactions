@@ -15,12 +15,14 @@ public class SpringTransactionApplication {
 		ApplicationContext context = SpringApplication.run(SpringTransactionApplication.class, args);
 		OrganizationController organizationController = context.getBean(OrganizationController.class);
 
+		int empdId = 12345678;
+		
 		Employee employee = new Employee();
-		employee.setEmpId(123456789);
+		employee.setEmpId(empdId);
 		employee.setEmpName("Taher");
 
 		HealthInsurance employeeHealthInsurance = new HealthInsurance();
-		employeeHealthInsurance.setEmpId(123456789);
+		employeeHealthInsurance.setEmpId(empdId);
 		employeeHealthInsurance.setHealthInsuranceSchemeName("Savings");
 		employeeHealthInsurance.setCoverageAmount("20000");
 

@@ -14,7 +14,7 @@ public class HealthInsuranceService {
 	@Autowired
 	private HealthInsuranceRepository healthInsuranceRepository;
 
-	@Transactional(propagation = Propagation.REQUIRED) // default level is Propagation.REQUIRED
+	@Transactional(propagation = Propagation.REQUIRED)
 	public void insertHealthInsurance(HealthInsurance healthInsurance) {
 		healthInsuranceRepository.save(healthInsurance);
 	}
