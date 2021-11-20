@@ -12,5 +12,5 @@ a) If the calling service i.e. "joinOrganization() in OrganzationService" has a 
 b) If the calling service i.e. "joinOrganization() in OrganzationService" does not have a transaction then "insertEmployee() in EmployeeService" method will not create new transaction.
 			  
 
-So in the case of NOT_SUPPORTS the "insertEmployee() in EmployeeService" will not make use of calling service trx if it exists, neither it will create new trx and always run without trx. 
+So in the case of NOT_SUPPORTS the "insertEmployee() in EmployeeService" will always run without trx. 
 			  
