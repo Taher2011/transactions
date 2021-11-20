@@ -13,5 +13,5 @@ a) If the calling service i.e. "joinOrganization() in OrganzationService" has a 
 b) If the calling service i.e. "joinOrganization() in OrganzationService" does not have a transaction then "insertEmployee() in EmployeeService" method will create new transaction.
 			  
 
-So in the case of REQUIRED the "insertEmployee() in EmployeeService" will make use of calling service trx if it exists, else it will create new trx. 
+So in the case of REQUIRED the "insertEmployee() in EmployeeService" will make use of calling service trx if it exists, else it will create its own new trx. 
 			  
